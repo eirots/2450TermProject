@@ -3,6 +3,7 @@
 #include <string>
 
 #include "Divide.h"
+#include "add.h"
 
 // test cases go here
 void runTests() {
