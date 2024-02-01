@@ -15,6 +15,17 @@ void runTests() {
     divY = 0;
     divResult = div.divide(divX, divY);
     std::cout << "Division test 2: " << divResult << std::endl;
+
+    Add adder;
+    int addResult;
+    int addX = 2, addY = 3;
+    addResult = adder.add(addX, addY);
+    std::cout << "Addition test 1: " << addResult << ", operand1: " << addX << std::endl;  
+    addY = -3;
+    addResult = adder.add(addX, addY);
+    std::cout << "Addition test 2: " << addResult << ", operand1: " << addX << std::endl; 
+}
+    
 }
 
 int main() {
