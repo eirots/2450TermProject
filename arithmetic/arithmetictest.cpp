@@ -20,10 +20,10 @@ void runTests() {
     int addResult;
     int addX = 2, addY = 3;
     addResult = adder.add(addX, addY);
-    std::cout << "Addition test 1: " << addResult << ", operand1: " << addX << std::endl;  
+    std::cout << "Addition test 1: " << addResult <<  std::endl;  
     addY = -3;
     addResult = adder.add(addX, addY);
-    std::cout << "Addition test 2: " << addResult << ", operand1: " << addX << std::endl; 
+    std::cout << "Addition test 2: " << addResult <<   std::endl; 
 }
     
 }
