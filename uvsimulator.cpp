@@ -1,6 +1,7 @@
 #include "uvsimulator.h"
 #include "loadstore/load.h"
 #include "loadstore/store.h"
+#include "arithmetic/subtract.h"
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -102,6 +103,10 @@ void UVSimulator::executeProgram() {
             case 30:  // ADD
                 break;
             case 31:  // SUBTRACT
+                {
+                    Subtract subtract;
+                    subtract.execute(*this, operand);
+                }
                 break;
             case 32:  // DIVIDE
                 break;
