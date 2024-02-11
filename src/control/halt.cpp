@@ -1,9 +1,9 @@
 #include "halt.h"
 
-void Halt::HALT() {
-}
+void Halt::HALT() {}
 
-void Halt::execute(UVSimulator& simulator) {
-    int memsize = simulator.getMemSize();
-    simulator.setPC(memsize);
+void Halt::execute(UVSimulator &simulator)
+{
+    int memSize = simulator.getMemSize();
+    simulator.setPC(memSize);
 }
