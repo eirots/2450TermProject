@@ -41,6 +41,11 @@ void UVSimulator::setMemory(int index, int value) {
     }  // does nothing if index is out of bounds
 }
 
+// gets size of memory array
+int UVSimulator::getMemSize() {
+    return sizeof(memory);
+}
+
 // Get value from accumulator
 int UVSimulator::getAccumulator() const {
     return accumulator;
@@ -51,10 +56,12 @@ void UVSimulator::setAccumulator(int value) {
     accumulator = value;
 }
 
+// sets value of PC for jump operations
 void UVSimulator::setPC(int value) {
     pc = value;
 }
 
+// gets value of PC
 int UVSimulator::getPC() {
     return pc;
 }
@@ -136,7 +143,9 @@ void UVSimulator::executeProgram() {
                 BranchZero branchzero;
                 branchzero.execute(*this, operand);  // BRANCHZERO
                 break;
-            case 43:  // HALT
+            case 43:
+                Halt halt;
+                halt.execute(*this);  // HALT
                 return;
             default:
                 cout << "Opcode: " << operand << " is invalid and was not included in the program." << endl;
