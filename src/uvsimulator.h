@@ -6,7 +6,9 @@
 // forward declarations to avoid cyclical delcarations
 class Branch;
 class BranchZero;
-
+class BranchNeg;
+class Halt;
+// end of forward declarations
 class UVSimulator {
    private:
     std::vector<int> memory;
