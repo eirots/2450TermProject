@@ -10,15 +10,16 @@ class BranchNeg;
 class Halt;
 // end of forward declarations
 
-class UVSimulator {
-   private:
+class UVSimulator
+{
+private:
     std::vector<int> memory;
     int accumulator;
     int pc;
 
-   public:
+public:
     UVSimulator();
-    void loadProgram(const std::vector<int>& program);
+    void loadProgram(const std::vector<int> &program);
     void executeProgram();
     std::vector<int> buildProgram();
     int getMemory(int index) const;

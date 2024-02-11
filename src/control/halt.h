@@ -1,9 +1,13 @@
-#include "uvsimulator.h"
+#ifndef HALT_H
+#define HALT_H
 
-class uvsimulator;  // forward declaration to avoid cyclical declarations
+#include "../uvsimulator.h"
 
-class Halt {
-   public:
+class Halt
+{
+public:
     void HALT();
     void execute(UVSimulator &simulator);
 };
+
+#endif
