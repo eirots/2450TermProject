@@ -20,6 +20,7 @@ class UVSimulator {
     std::vector<int> buildProgram();
     int getMemory(int index) const;
     void setMemory(int index, int value);
+    int getMemSize();
     int getAccumulator() const;
     void setAccumulator(int value);
     void printMemory() const;
