@@ -3,7 +3,9 @@
 
 #include <vector>
 
-class Branch;  // forward declaration to avoid cyclical delcarations
+// forward declarations to avoid cyclical delcarations
+class Branch;
+class BranchZero;
 
 class UVSimulator {
    private:

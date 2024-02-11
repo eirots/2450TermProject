@@ -130,7 +130,9 @@ void UVSimulator::executeProgram() {
                 break;
             case 41:  // BRANCHNEG
                 break;
-            case 42:  // BRANCHZERO
+            case 42:
+                BranchZero branchzero;
+                branchzero.execute(*this, operand);  // BRANCHZERO
                 break;
             case 43:  // HALT
                 return;
