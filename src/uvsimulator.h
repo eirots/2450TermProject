@@ -3,13 +3,15 @@
 
 #include <vector>
 
+class Branch;  // forward declaration to avoid cyclical delcarations
+
 class UVSimulator {
-private:
+   private:
     std::vector<int> memory;
     int accumulator;
     int pc;
 
-public:
+   public:
     UVSimulator();
     void loadProgram(const std::vector<int>& program);
     void executeProgram();
@@ -19,6 +21,8 @@ public:
     int getAccumulator() const;
     void setAccumulator(int value);
     void printMemory() const;
+    void setPC(int value);
+    int getPC();
 };
 
 #endif

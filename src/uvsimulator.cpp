@@ -1,10 +1,16 @@
 #include "uvsimulator.h"
-#include "loadstore/load.h"
-#include "loadstore/store.h"
-#include "arithmetic/subtract.h"
+
 #include <iostream>
 #include <sstream>
 #include <vector>
+
+#include "arithmetic/subtract.h"
+#include "branch.h"
+#include "control/branchneg.h"
+#include "control/branchzero.h"
+#include "control/halt.h"
+#include "loadstore/load.h"
+#include "loadstore/store.h"
 
 using namespace std;
 
@@ -22,8 +28,8 @@ void UVSimulator::loadProgram(const vector<int>& program) {
 int UVSimulator::getMemory(int index) const {
     if (index >= 0 && index < memory.size()) {
         return memory[index];
-    } else {               
-        return 0; // Returning 0 if index is out of bounds
+    } else {
+        return 0;  // Returning 0 if index is out of bounds
     }
 }
 
@@ -31,7 +37,8 @@ int UVSimulator::getMemory(int index) const {
 void UVSimulator::setMemory(int index, int value) {
     if (index >= 0 && index < memory.size()) {
         memory[index] = value;
-    } else {} // does nothing if index is out of bounds
+    } else {
+    }  // does nothing if index is out of bounds
 }
 
 // Get value from accumulator
@@ -44,6 +51,14 @@ void UVSimulator::setAccumulator(int value) {
     accumulator = value;
 }
 
+void UVSimulator::setPC(int value) {
+    pc = value;
+}
+
+int UVSimulator::getPC() {
+    return pc;
+}
+
 // Build a program
 vector<int> UVSimulator::buildProgram() {
     vector<int> program;
@@ -53,7 +68,7 @@ vector<int> UVSimulator::buildProgram() {
         cout << "Enter your four-digit operation or 'done' to exit: \n";
         cin >> userInput;
         if (userInput == "done") {
-            break;   
+            break;
         }
         stringstream ss(userInput);
         int number;
@@ -66,13 +81,13 @@ vector<int> UVSimulator::buildProgram() {
         }
     } while (true);
 
-    return program;        
+    return program;
 }
 
 void UVSimulator::printMemory() const {
-        cout << "Memory contents:" << endl;
-        for (int i = 0; i < memory.size(); ++i) {
-            cout << "Memory[" << i << "]: " << memory[i] << endl;
+    cout << "Memory contents:" << endl;
+    for (int i = 0; i < memory.size(); ++i) {
+        cout << "Memory[" << i << "]: " << memory[i] << endl;
     }
 }
 
@@ -89,31 +104,30 @@ void UVSimulator::executeProgram() {
             case 11:  // WRITE
                 break;
             case 20:  // LOAD
-                {
-                    Load load;
-                    load.execute(*this, operand);
-                }
-                break;
+            {
+                Load load;
+                load.execute(*this, operand);
+            } break;
             case 21:  // STORE
-                {
-                    Store store;
-                    store.execute(*this, operand);
-                }
-                break;
+            {
+                Store store;
+                store.execute(*this, operand);
+            } break;
             case 30:  // ADD
                 break;
             case 31:  // SUBTRACT
-                {
-                    Subtract subtract;
-                    subtract.execute(*this, operand);
-                }
-                break;
+            {
+                Subtract subtract;
+                subtract.execute(*this, operand);
+            } break;
             case 32:  // DIVIDE
                 break;
             case 33:  // MULTIPLY
                 break;
-            case 40:  // BRANCH
-                continue;
+            case 40:
+                Branch branch;
+                branch.execute(*this, operand);  // BRANCH
+                break;
             case 41:  // BRANCHNEG
                 break;
             case 42:  // BRANCHZERO
