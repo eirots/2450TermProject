@@ -1,8 +1,9 @@
-#include "header.h"
+#include "multiply.h"
 
-Multiply::Multiply() { }
+Multiply::Multiply() {}
 
-float Multiply::multiply(float &memory, float accum) {
+float Multiply::multiply(float &memory, float accum)
+{
   float product;
   product = memory * accum;
   return product;
