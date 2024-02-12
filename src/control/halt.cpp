@@ -2,8 +2,7 @@
 
 void Halt::HALT() {}
 
-void Halt::execute(UVSimulator &simulator)
-{
+void Halt::execute(UVSimulator &simulator) {
     int memSize = simulator.getMemSize();
     simulator.setPC(memSize);
 }

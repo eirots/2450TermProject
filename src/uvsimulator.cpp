@@ -4,11 +4,16 @@
 #include <sstream>
 #include <vector>
 
+#include "arithmetic/add.h"
+#include "arithmetic/divide.h"
+#include "arithmetic/multiply.h"
 #include "arithmetic/subtract.h"
-#include "branch.h"
+#include "control/branch.h"
 #include "control/branchneg.h"
 #include "control/branchzero.h"
 #include "control/halt.h"
+#include "io/read.h"
+#include "io/write.h"
 #include "loadstore/load.h"
 #include "loadstore/store.h"
 
@@ -108,7 +113,12 @@ void UVSimulator::executeProgram() {
         switch (opcode) {
             case 10:  // READ
                 break;
-            case 11:  // WRITE
+            case 11:
+                // TODO fix this section
+                // Write write;
+                // write.WRITE();
+                //  WRITE
+
                 break;
             case 20:  // LOAD
             {
