@@ -3,7 +3,7 @@
 
 #include "../uvsimulator.h"
 
-class uvsimulator;  // forward declaration to avoid cyclical declarations
+class UVSimulator;  // forward declaration to avoid cyclical declarations
 
 class BranchZero {
    public:

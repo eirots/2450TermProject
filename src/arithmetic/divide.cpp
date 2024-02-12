@@ -1,13 +1,15 @@
 #include "divide.h"
 
+#include "../uvsimulator.h"
 // but the sign of a data word may be either plus or minus
 Divide::Divide() {}
 // Divide the word in the accumulator by a word from a specific location in memory (leave the result in the accumulator).
-void Divide::execute(UVSimulator& sim, int divisor) {
+void Divide::execute(UVSimulator& sim, int operand) {
     int result;
+    int divisor = sim.getMemory(operand);
     if (divisor != 0) {
         int holder = sim.getAccumulator();
-        holder /= sim.getMemory(divisor);
+        holder /= sim.getMemory(operand);
         sim.setAccumulator(holder);
         // return result;
     } else {

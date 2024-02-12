@@ -1,6 +1,7 @@
+class UVSimulator;  // forward declaration to avoid cyclical declarations
+
 #ifndef DIVIDE_H
 #define DIVIDE_H
-#include "../uvsimulator.h"
 
 class Divide {
    public:

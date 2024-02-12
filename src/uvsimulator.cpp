@@ -99,52 +99,65 @@ void UVSimulator::executeProgram() {
 
         switch (opcode) {
             case 10:  // READ
+            {
                 Read read;
                 read.execute(*this, operand);
-                break;
+            } break;
             case 11:  // WRITE
+            {
                 Write write;
                 write.execute(*this, operand);
-                break;
+            } break;
             case 20:  // LOAD
+            {
                 Load load;
                 load.execute(*this, operand);
-                break;
+            } break;
             case 21:  // STORE
+            {
                 Store store;
                 store.execute(*this, operand);
-                break;
+            } break;
             case 30:  // ADD
+            {
                 Add add;
                 add.execute(*this, operand);
-                break;
+            } break;
             case 31:  // SUBTRACT
+            {
                 Subtract subtract;
                 subtract.execute(*this, operand);
-                break;
+            } break;
             case 32:  // DIVIDE
+            {
                 Divide divide;
                 divide.execute(*this, operand);
-                break;
+            } break;
             case 33:  // MULTIPLY
+            {
                 Multiply multiply;
                 multiply.execute(*this, operand);
-                break;
+            } break;
             case 40:  // BRANCH
+            {
                 Branch branch;
                 branch.execute(*this, operand);
-                break;
+            } break;
             case 41:  // BRANCHNEG
+            {
                 BranchNeg branchneg;
                 branchneg.execute(*this, operand);
-                break;
+            } break;
             case 42:  // BRANCHZERO
+            {
                 BranchZero branchzero;
                 branchzero.execute(*this, operand);
-                break;
+            } break;
             case 43:  // HALT
+            {
                 Halt halt;
                 halt.execute(*this);
+            }
                 return;
             default:
                 cout << "Opcode: " << operand << " is invalid and was not included in the program." << endl;

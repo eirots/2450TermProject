@@ -34,12 +34,14 @@ void spitline(std::string lineToPrint) {
 void testAdd() {
     Add adder;
     UVSimulator simulator;
-    int operand = 5;
+    int operand = 0;
 
     simulator.setAccumulator(5);
-    simulator.setMemory(0, 5);
+    simulator.setMemory(0, 10);
+    // std::cout << simulator.getAccumulator() << "accum value " << std::endl;
 
     adder.execute(simulator, operand);
+    // std::cout << simulator.getAccumulator() << "accum value " << std::endl;
     assert(simulator.getAccumulator() == 15);
     spitline("\tadd passed");
 }
@@ -61,11 +63,11 @@ void testMultiply() {
 
     sim.setAccumulator(5);
     sim.setMemory(0, 5);
-    int operand = 2;
-
+    int operand = 0;
+    // std::cout << sim.getAccumulator() << "accum value " << std::endl;
     multiplier.execute(sim, operand);
 
-    assert(sim.getAccumulator() == 10);
+    assert(sim.getAccumulator() == 25);
 
     spitline("\tmultiply passed");
 }
@@ -75,10 +77,10 @@ void testDivide() {
 
     sim.setAccumulator(20);
     sim.setMemory(0, 5);
-    int operand = 5;
+    int operand = 0;
 
     div.execute(sim, operand);
-
+    std::cout << sim.getAccumulator() << "accum value " << std::endl;
     assert(sim.getAccumulator() == 4);
     spitline("\tdivide passed");
 }
@@ -89,10 +91,10 @@ void testDivideByZero() {
     sim.setAccumulator(20);
     sim.setMemory(0, 5);
 
-    int divisor = 0;
+    int operand = 0;
 
     try {
-        divider.execute(sim, divisor);
+        divider.execute(sim, operand);
         assert(false);
     } catch (const char *error) {
         assert(std::string(error) == "Divide by zero not allowed");

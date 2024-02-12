@@ -1,5 +1,6 @@
 #include "subtract.h"
 
+#include "../uvsimulator.h"
 Subtract::Subtract() {}
 
 void Subtract::execute(UVSimulator &simulator, int operand) {

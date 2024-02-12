@@ -1,6 +1,6 @@
 #include "branch.h"
 
-void BRANCH() {
+void Branch::BRANCH() {
 }
 
 void Branch::execute(UVSimulator &simulator, int operand) {
