@@ -99,13 +99,17 @@ void UVSimulator::executeProgram() {
 
         switch (opcode) {
             case 10:  // READ
-                // TODO fix this section
+            {
+                Read read;
+                read.execute(*this, operand);
+            } break;
                 break;
-            case 11:
-                // TODO fix this section
-                // Write write;
-                // write.WRITE();
-                //  WRITE
+            case 11: // WRITE
+            {
+                Write write;
+                write.execute(*this, operand);
+            } break
+              
                 break;
             case 20:  // LOAD
             {
@@ -118,6 +122,11 @@ void UVSimulator::executeProgram() {
                 store.execute(*this, operand);
             } break;
             case 30:  // ADD
+
+            {
+                Add add;
+                add.execute(*this, operand);
+            } break;
                 break;
             case 31:  // SUBTRACT
             {
