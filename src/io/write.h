@@ -1,8 +1,10 @@
-#ifndef write_h
-#define write_h
-class Write {
-   public:
-    void WRITE(int location, int value, int memsize);
-};
+#ifndef WRITE_H
+#define WRITE_H
 
-#endif  // write_h
+const int MEMORY_SIZE = 100;  // Define the size of the memory array
+
+extern int memory[MEMORY_SIZE];
+
+void WRITE(int location, int value);
+
+#endif
