@@ -1,6 +1,6 @@
-#ifndef write_h
-#define write_h
 
-void WRITE(int location, int value);
 
-#endif
+class Write {
+   public:
+    void WRITE(int location, int value, int memsize);
+};

@@ -1,4 +1,4 @@
-#include "uvsimulator.h"
+#include "../uvsimulator.h"
 
 class uvsimulator;  // forward declaration to avoid cyclical declarations
 
