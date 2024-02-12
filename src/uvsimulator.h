@@ -44,4 +44,4 @@ class UVSimulator {
     int getPC();
 };
 
-#endif
+#endif  // UVSIMULATOR_H
