@@ -103,14 +103,13 @@ void UVSimulator::executeProgram() {
                 Read read;
                 read.execute(*this, operand);
             } break;
-                
-            case 11: // WRITE
+
+            case 11:  // WRITE
             {
                 Write write;
                 write.execute(*this, operand);
             } break;
-              
-                
+
             case 20:  // LOAD
             {
                 Load load;
@@ -127,7 +126,7 @@ void UVSimulator::executeProgram() {
                 Add add;
                 add.execute(*this, operand);
             } break;
-                
+
             case 31:  // SUBTRACT
             {
                 Subtract subtract;
@@ -137,8 +136,8 @@ void UVSimulator::executeProgram() {
                 break;
 
             case 33:  // MULTIPLY
-               break;
-                
+                break;
+
             case 40:  // BRANCH
                 Branch branch;
                 branch.execute(*this, operand);
