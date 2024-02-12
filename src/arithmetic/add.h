@@ -2,10 +2,7 @@
 #define ADD_H
 
 class Add {
-   public:
-    Add();
-
-    int add(int &operand, int operand1);
+public:
+    void execute(UVSimulator& simulator, int operand);
 };
-
 #endif  // ADD_H
