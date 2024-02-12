@@ -1,4 +1,6 @@
-#include "uvsimulator.h"
+#ifndef branchneg_h
+#define branchneg_h
+#include "../uvsimulator.h"
 
 class uvsimulator;  // forward declaration to avoid cyclical declarations
 
@@ -7,3 +9,4 @@ class BranchNeg {
     void BRANCHNEG();
     void execute(UVSimulator &simulator, int operand);
 };
+#endif  // branchneg_h

@@ -1,7 +1,9 @@
-
+#ifndef MULTIPLY_H
+#define MULTIPLY_H
 class Multiply {
-  public:
+   public:
     Multiply();
 
     float multiply(float &memory, float accum);
 };
+#endif  // MULTIPLY_H
