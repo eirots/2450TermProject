@@ -1,6 +1,9 @@
 #ifndef READ_H
 #define READ_H
 
-void READ(int location);
+class Read {
+public:
+  void execute(UVSimulator& simulator, int operand);
+};
 
 #endif  // READ_H
