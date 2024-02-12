@@ -1,8 +1,9 @@
+#include "../uvsimulator.h"
 #ifndef ADD_H
 #define ADD_H
 
 class Add {
-public:
+   public:
     void execute(UVSimulator& simulator, int operand);
 };
 #endif  // ADD_H

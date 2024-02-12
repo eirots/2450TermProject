@@ -35,7 +35,7 @@ void UVSimulator::setMemory(int index, int value) {
 
 // gets size of memory array
 int UVSimulator::getMemSize() {
-    return sizeof(memory);
+    return memory.size();
 }
 
 // Get value from accumulator
@@ -99,45 +99,37 @@ void UVSimulator::executeProgram() {
 
         switch (opcode) {
             case 10:  // READ
-            {
                 Read read;
                 read.execute(*this, operand);
-            } break;
-
+                break;
             case 11:  // WRITE
-            {
                 Write write;
                 write.execute(*this, operand);
-            } break;
-
+                break;
             case 20:  // LOAD
-            {
                 Load load;
                 load.execute(*this, operand);
-            } break;
+                break;
             case 21:  // STORE
-            {
                 Store store;
                 store.execute(*this, operand);
-            } break;
+                break;
             case 30:  // ADD
-
-            {
                 Add add;
                 add.execute(*this, operand);
-            } break;
-
+                break;
             case 31:  // SUBTRACT
-            {
                 Subtract subtract;
                 subtract.execute(*this, operand);
-            } break;
+                break;
             case 32:  // DIVIDE
+                Divide divide;
+                divide.execute(*this, operand);
                 break;
-
             case 33:  // MULTIPLY
+                Multiply multiply;
+                multiply.execute(*this, operand);
                 break;
-
             case 40:  // BRANCH
                 Branch branch;
                 branch.execute(*this, operand);
