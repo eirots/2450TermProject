@@ -1,4 +1,7 @@
-#include "uvsimulator.h"
+#ifndef branchzero_h
+#define branchzero_h
+
+#include "../uvsimulator.h"
 
 class uvsimulator;  // forward declaration to avoid cyclical declarations
 
@@ -7,3 +10,4 @@ class BranchZero {
     void BRANCHZERO();
     void execute(UVSimulator &simulator, int operand);
 };
+#endif  // branchzero_h

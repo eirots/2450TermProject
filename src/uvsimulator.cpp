@@ -4,14 +4,6 @@
 #include <sstream>
 #include <vector>
 
-#include "arithmetic/subtract.h"
-#include "branch.h"
-#include "control/branchneg.h"
-#include "control/branchzero.h"
-#include "control/halt.h"
-#include "loadstore/load.h"
-#include "loadstore/store.h"
-
 using namespace std;
 
 // Constructor
@@ -107,8 +99,13 @@ void UVSimulator::executeProgram() {
 
         switch (opcode) {
             case 10:  // READ
+                // TODO fix this section
                 break;
-            case 11:  // WRITE
+            case 11:
+                // TODO fix this section
+                // Write write;
+                // write.WRITE();
+                //  WRITE
                 break;
             case 20:  // LOAD
             {
@@ -131,21 +128,21 @@ void UVSimulator::executeProgram() {
                 break;
             case 33:  // MULTIPLY
                 break;
-            case 40:
+            case 40:  // BRANCH
                 Branch branch;
-                branch.execute(*this, operand);  // BRANCH
+                branch.execute(*this, operand);
                 break;
-            case 41:
+            case 41:  // BRANCHNEG
                 BranchNeg branchneg;
-                branchneg.execute(*this, operand);  // BRANCHNEG
+                branchneg.execute(*this, operand);
                 break;
-            case 42:
+            case 42:  // BRANCHZERO
                 BranchZero branchzero;
-                branchzero.execute(*this, operand);  // BRANCHZERO
+                branchzero.execute(*this, operand);
                 break;
-            case 43:
+            case 43:  // HALT
                 Halt halt;
-                halt.execute(*this);  // HALT
+                halt.execute(*this);
                 return;
             default:
                 cout << "Opcode: " << operand << " is invalid and was not included in the program." << endl;

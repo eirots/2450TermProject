@@ -4,8 +4,8 @@
 class UVSimulator;
 
 class Subtract {
-public:
+   public:
     static void execute(UVSimulator& simulator, int operand);
 };
 
-#endif
+#endif  // SUBTRACT_H
