@@ -1,9 +1,11 @@
+class UVSimulator;  // forward declaration to avoid cyclical declarations
+
 #ifndef DIVIDE_H
 #define DIVIDE_H
+
 class Divide {
    public:
     Divide();
-
-    int divide(int &dividend, int divisor);
+    void execute(UVSimulator& sim, int divisor);
 };
 #endif  // DIVIDE_H

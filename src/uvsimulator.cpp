@@ -35,7 +35,7 @@ void UVSimulator::setMemory(int index, int value) {
 
 // gets size of memory array
 int UVSimulator::getMemSize() {
-    return sizeof(memory);
+    return memory.size();
 }
 
 // Get value from accumulator
@@ -103,14 +103,11 @@ void UVSimulator::executeProgram() {
                 Read read;
                 read.execute(*this, operand);
             } break;
-                
-            case 11: // WRITE
+            case 11:  // WRITE
             {
                 Write write;
                 write.execute(*this, operand);
             } break;
-              
-                
             case 20:  // LOAD
             {
                 Load load;
@@ -122,38 +119,45 @@ void UVSimulator::executeProgram() {
                 store.execute(*this, operand);
             } break;
             case 30:  // ADD
-
             {
                 Add add;
                 add.execute(*this, operand);
             } break;
-                
             case 31:  // SUBTRACT
             {
                 Subtract subtract;
                 subtract.execute(*this, operand);
             } break;
             case 32:  // DIVIDE
-                break;
-
+            {
+                Divide divide;
+                divide.execute(*this, operand);
+            } break;
             case 33:  // MULTIPLY
-               break;
-                
+            {
+                Multiply multiply;
+                multiply.execute(*this, operand);
+            } break;
             case 40:  // BRANCH
+            {
                 Branch branch;
                 branch.execute(*this, operand);
-                break;
+            } break;
             case 41:  // BRANCHNEG
+            {
                 BranchNeg branchneg;
                 branchneg.execute(*this, operand);
-                break;
+            } break;
             case 42:  // BRANCHZERO
+            {
                 BranchZero branchzero;
                 branchzero.execute(*this, operand);
-                break;
+            } break;
             case 43:  // HALT
+            {
                 Halt halt;
                 halt.execute(*this);
+            }
                 return;
             default:
                 cout << "Opcode: " << operand << " is invalid and was not included in the program." << endl;
