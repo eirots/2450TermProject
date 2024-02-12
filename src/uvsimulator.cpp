@@ -99,13 +99,10 @@ void UVSimulator::executeProgram() {
 
         switch (opcode) {
             case 10:  // READ
-                // TODO fix this section
+
                 break;
             case 11:
-                // TODO fix this section
-                // Write write;
-                // write.WRITE();
-                //  WRITE
+
                 break;
             case 20:  // LOAD
             {
