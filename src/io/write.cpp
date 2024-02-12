@@ -1,5 +1,5 @@
 #include "write.h"
-
+#include "../uvsimulator.h"
 #include <iostream>
 #include <stdexcept>
 
