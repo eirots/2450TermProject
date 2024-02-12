@@ -134,8 +134,16 @@ void UVSimulator::executeProgram() {
                 subtract.execute(*this, operand);
             } break;
             case 32:  // DIVIDE
-                break;
+            {
+                Divide divide;
+                divide.execute(*this, operand);
+            } break;
+
             case 33:  // MULTIPLY
+            {
+                Multiply multiply;
+                multiply.execute(*this, operand);
+            } break;
                 break;
             case 40:  // BRANCH
                 Branch branch;
