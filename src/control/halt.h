@@ -1,3 +1,5 @@
+#ifndef halt_h
+#define halt_h
 #include "../uvsimulator.h"
 
 class uvsimulator;  // forward declaration to avoid cyclical declarations
@@ -7,3 +9,4 @@ class Halt {
     void HALT();
     void execute(UVSimulator &simulator);
 };
+#endif  // halt_h

@@ -4,8 +4,8 @@
 class UVSimulator;
 
 class Store {
-public:
+   public:
     static void execute(UVSimulator& simulator, int operand);
 };
 
-#endif
+#endif  // STORE_H

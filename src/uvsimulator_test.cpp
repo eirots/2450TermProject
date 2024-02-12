@@ -5,10 +5,6 @@
 #include <sstream>
 #include <vector>
 
-#include "arithmetic/subtract.h"
-#include "loadstore/load.h"
-#include "loadstore/store.h"
-
 // Test case for loading a program into memory
 void testLoadProgram() {
     UVSimulator simulator;

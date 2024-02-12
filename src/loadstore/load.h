@@ -4,8 +4,8 @@
 class UVSimulator;
 
 class Load {
-public:
+   public:
     static void execute(UVSimulator& simulator, int operand);
 };
 
-#endif
+#endif  // LOAD_H
