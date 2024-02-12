@@ -1,4 +1,4 @@
-#include "uvsimulator.h"
+#include "../uvsimulator.h"
 
 #include <cassert>
 #include <iostream>
