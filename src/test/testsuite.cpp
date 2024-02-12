@@ -32,14 +32,15 @@ void spitline(std::string lineToPrint) {
 
 // START OF ARITHMETIC TESTS
 void testAdd() {
-    int operand = 5;
-    int operand1 = 10;
     Add adder;
+    UVSimulator simulator;
+    int operand = 5;
 
-    int result = adder.add(operand, operand1);
+    simulator.setAccumulator(5);
+    simulator.setMemory(0, 5);
 
-    assert(result == 15);
-    assert(operand == 15);
+    adder.execute(simulator, operand);
+    assert(simulator.getAccumulator() == 15);
     spitline("\tadd passed");
 }
 void testSubtract() {
@@ -55,39 +56,48 @@ void testSubtract() {
     spitline("\tsubtract passed");
 }
 void testMultiply() {
-    float memory = 5.0f;
-    float accum = 2.5f;
+    UVSimulator sim;
     Multiply multiplier;
 
-    float result = multiplier.multiply(memory, accum);
+    sim.setAccumulator(5);
+    sim.setMemory(0, 5);
+    int operand = 2;
 
-    assert(result == 12.5f);
-    assert(memory == 5.0f);
+    multiplier.execute(sim, operand);
+
+    assert(sim.getAccumulator() == 10);
+
     spitline("\tmultiply passed");
 }
 void testDivide() {
-    int dividend = 20;
-    int divisor = 5;
-    Divide divider;
+    UVSimulator sim;
+    Divide div;
 
-    int result = divider.divide(dividend, divisor);
+    sim.setAccumulator(20);
+    sim.setMemory(0, 5);
+    int operand = 5;
 
-    assert(result == 4);
-    assert(dividend == 20);
+    div.execute(sim, operand);
+
+    assert(sim.getAccumulator() == 4);
     spitline("\tdivide passed");
 }
 void testDivideByZero() {
-    int dividend = 20;
-    int divisor = 0;
+    UVSimulator sim;
     Divide divider;
 
+    sim.setAccumulator(20);
+    sim.setMemory(0, 5);
+
+    int divisor = 0;
+
     try {
-        divider.divide(dividend, divisor);
+        divider.execute(sim, divisor);
         assert(false);
     } catch (const char *error) {
         assert(std::string(error) == "Divide by zero not allowed");
     }
-    assert(dividend == 20);
+    assert(sim.getAccumulator() == 20);
     spitline("\tdividebyzero passed");
 }
 // END OF ARITHMATIC TESTS
