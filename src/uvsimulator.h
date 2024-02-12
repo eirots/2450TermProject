@@ -1,3 +1,15 @@
+// forward declarations to avoid cyclical delcarations
+class Add;
+class Divide;
+class Multiply;
+class Subtract;
+class Read;
+class Write;
+class Branch;
+class BranchZero;
+class BranchNeg;
+class Halt;
+// end of forward declarations
 #ifndef UVSIMULATOR_H
 #define UVSIMULATOR_H
 
@@ -15,13 +27,6 @@
 #include "io/write.h"
 #include "loadstore/load.h"
 #include "loadstore/store.h"
-
-// forward declarations to avoid cyclical delcarations
-class Branch;
-class BranchZero;
-class BranchNeg;
-class Halt;
-// end of forward declarations
 
 class UVSimulator {
    private:

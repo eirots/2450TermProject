@@ -1,8 +1,7 @@
+class UVSimulator;  // forward declaration to avoid cyclical declarations
+
 #ifndef SUBTRACT_H
 #define SUBTRACT_H
-#include "../uvsimulator.h"
-
-class UVSimulator;
 
 class Subtract {
    public:

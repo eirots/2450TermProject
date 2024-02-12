@@ -1,6 +1,8 @@
+class UVSimulator;  // forward declaration to avoid cyclical declarations
+
 #ifndef MULTIPLY_H
 #define MULTIPLY_H
-#include "../uvsimulator.h"
+
 class Multiply {
    public:
     Multiply();

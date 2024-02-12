@@ -1,5 +1,6 @@
 #include "multiply.h"
 
+#include "../uvsimulator.h"
 Multiply::Multiply() {}
 
 void Multiply::execute(UVSimulator& sim, int operand) {
