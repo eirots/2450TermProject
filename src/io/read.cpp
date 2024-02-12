@@ -1,5 +1,6 @@
 #include <iostream>
 #include "read.h"
+#include "../uvsimulator.h"
 
 extern int memory[100];
 
