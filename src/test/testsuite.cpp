@@ -80,7 +80,7 @@ void testDivide() {
     int operand = 0;
 
     div.execute(sim, operand);
-    std::cout << sim.getAccumulator() << "accum value " << std::endl;
+    // std::cout << sim.getAccumulator() << "accum value " << std::endl;
     assert(sim.getAccumulator() == 4);
     spitline("\tdivide passed");
 }
@@ -174,12 +174,9 @@ void testStore() {
 
     simulator.setAccumulator(accumulatorValue);
 
-    // Create a Store object and call execute method
     Store store;
     store.execute(simulator, operand);
 
-    // Assert or verify the expected behavior
-    // For example, you might check if the memory location was set correctly
     assert(simulator.getMemory(operand) == accumulatorValue);
     spitline("\tstore passed");
 }
