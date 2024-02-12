@@ -7,7 +7,7 @@ extern int memory[MEMORY_SIZE];
 
 class Write {
 public:
-  void WRITE::execute(UVSimulator& simulator, int operand);
+  void execute(UVSimulator& simulator, int operand);
 };
 
 #endif
