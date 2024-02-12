@@ -1,4 +1,5 @@
 #include "add.h"
+#include "../uvsimulator.h"
 
 Add::Add() {}
 
