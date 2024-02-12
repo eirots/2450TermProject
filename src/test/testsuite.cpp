@@ -89,7 +89,7 @@ void testDivideByZero() {
     Divide divider;
 
     sim.setAccumulator(20);
-    sim.setMemory(0, 5);
+    sim.setMemory(0, 0);
 
     int operand = 0;
 
