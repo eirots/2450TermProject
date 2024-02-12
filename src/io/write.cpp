@@ -5,7 +5,7 @@
 
 int memory[MEMORY_SIZE];  // Define the memory array
 
-void WRITE::execute(UVSimulator& simulator, int operand) {
+void Write::execute(UVSimulator& simulator, int operand) {
     if (location >= 0 && location < MEMORY_SIZE) {
         memory[location] = value;
         std::cout << "Value " << value << " written at location " << location << std::endl;
