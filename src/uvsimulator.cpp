@@ -108,7 +108,7 @@ void UVSimulator::executeProgram() {
             {
                 Write write;
                 write.execute(*this, operand);
-            } break
+            } break;
               
                 
             case 20:  // LOAD
