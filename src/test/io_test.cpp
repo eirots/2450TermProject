@@ -6,22 +6,35 @@
 extern int memory[];
 
 void test_READ() {
-    for (int i = 0; i < 100; i++) {
-        memory[i] = i;
-    }
-    READ(10);
-    if (memory[10] != 10) {
-        std::cout << "\tread test failed" << std::endl;
+    UVSimulator simulator;  // Create an instance of UVSimulator
+
+    // Load the program into memory
+    std::vector<int> program = {10, 0};  // Assuming the program consists of a single READ instruction at memory location 0
+    simulator.loadProgram(program);
+
+    std::cout << "Testing READ function:" << std::endl;
+
+    // Execute the program
+    simulator.executeProgram();
+
+    // Verify if the memory location has been updated correctly
+    if (simulator.getMemory(0) != 10) {
+        std::cout << "\tRead test failed" << std::endl;
     } else {
-        std::cout << "\tread passed!" << std::endl;
+        std::cout << "\tRead test passed!" << std::endl;
     }
 }
 
 void test_WRITE() {
-    WRITE(5, 20);
-    if (memory[5] != 20) {
+    UVSimulator sim;
+    sim.setAccumulator(20);
+
+    Write write;
+    write.execute(sim, 5);
+
+    if (sim.getMemory(5) != 20) {
         std::cout << "\twrite failed!" << std::endl;
     } else {
-        std::cout << "\twrite passed!" << std::endl;
+        std::cout << "\tWrite passed" << std::endl;
     }
 }

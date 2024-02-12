@@ -1,9 +1,12 @@
+class UVSimulator;  // forward declaration to avoid cyclical declarations
+
 #ifndef MULTIPLY_H
 #define MULTIPLY_H
+
 class Multiply {
    public:
     Multiply();
 
-    float multiply(float &memory, float accum);
+    void execute(UVSimulator& sim, int operand);
 };
 #endif  // MULTIPLY_H

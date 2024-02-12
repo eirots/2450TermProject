@@ -1,10 +1,11 @@
+class UVSimulator;  // forward declaration to avoid cyclical declarations
+
 #ifndef SUBTRACT_H
 #define SUBTRACT_H
 
-class UVSimulator;
-
 class Subtract {
    public:
+    Subtract();
     static void execute(UVSimulator& simulator, int operand);
 };
 
