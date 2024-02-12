@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "uvsimulator.h"
+#include "../uvsimulator.h"
 
 // Just a test to mess with all the basics
 int main() {
