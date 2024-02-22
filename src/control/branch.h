@@ -7,7 +7,6 @@ class UVSimulator;  // forward declaration to avoid cyclical declarations
 /*
  * class Branch
  * A class to handle the branch operation in the UVSimulator.
- *
  * This class provides the functionality to change the program counter of the 
    UVSimulator to a specific memory location, effectively causing the program execution to "branch" to that location.
  */
