@@ -3,6 +3,17 @@
 #include "../uvsimulator.h"
 Subtract::Subtract() {}
 
+
+/*
+ * Executes the subtract operation.
+ *
+ * This method subtracts a value from a specific memory location from the value in the accumulator.
+ *
+ * param: simulator, A reference to the UVSimulator instance on which to perform the subtract operation, and  
+   operand, The memory location from which to get the value to be subtracted.
+ * pre: The operand must be a valid index within the bounds of the memory.
+ * post: The value in the accumulator is decreased by the value at the specified memory location.
+ */
 void Subtract::execute(UVSimulator &simulator, int operand) {
     int accum = simulator.getAccumulator();
     int result = accum - simulator.getMemory(operand);  // Grab accumulator value
