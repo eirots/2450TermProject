@@ -7,7 +7,7 @@ class UVSimulator;  // forward declaration to avoid cyclical declarations
 /*
  * class Read
  * A class to handle the read operation in the UVSimulator.
- * This class provides the functionality to read an integer from the user and store it in a specific memory location in the UVSimulator.
+ * This class provides the functionality to read an integer from the user and store it in a specific memory location.
  */
 
 class Read {
