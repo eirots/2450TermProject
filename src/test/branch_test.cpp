@@ -2,7 +2,11 @@
 #include <iostream>
 #include "branch.h"
 
-// Test case for the Branch class
+/* 
+ * Test case for the Branch class
+ * This function tests the Branch class by creating an instance of the class, calling the execute method with a 
+   UVSimulator instance and an operand, and asserting that the program counter of the instance is as expected.
+ */
 void testBranch()
 {
   UVSimulator simulator;
@@ -14,6 +18,12 @@ void testBranch()
   assert(simulator.getPC() == operand);
 }
 
+
+/*
+ * Main function.
+ * This function calls the testBranch function and prints "Test passed!" to the console if no assertions failed.
+ * return 0 if the program runs successfully.
+ */
 int main()
 {
   testBranch();
