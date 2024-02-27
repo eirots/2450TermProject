@@ -1,6 +1,7 @@
 #ifndef branchneg_h
 #define branchneg_h
 #include "../uvsimulator.h"
+#include "control.h"
 
 class UVSimulator;  // forward declaration to avoid cyclical declarations
 
@@ -10,11 +11,10 @@ class UVSimulator;  // forward declaration to avoid cyclical declarations
  * This class provides the functionality to change the program counter to a specific memory location 
    if the value in the accumulator is negative.
  */
+class BranchNeg : public Control {
 
-
-class BranchNeg {
    public:
     void BRANCHNEG();
-    void execute(UVSimulator &simulator, int operand);
+    void execute(UVSimulator &simulator, int operand) override;
 };
 #endif  // branchneg_h

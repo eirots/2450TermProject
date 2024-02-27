@@ -4,7 +4,6 @@
 
 Add::Add() {}
 
-
 /*
  * Executes the add operation.
  * This method adds a value from a specific memory location to the accumulator of the UVSimulator.
