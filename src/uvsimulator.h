@@ -1,11 +1,19 @@
 // forward declarations to avoid cyclical delcarations
+
+// arithmetic classes
 class Arithmetic;
 class Add;
 class Divide;
 class Multiply;
 class Subtract;
+
+// io classes
+class IO;
 class Read;
 class Write;
+
+// control classes
+class Control;
 class Branch;
 class BranchZero;
 class BranchNeg;

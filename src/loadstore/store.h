@@ -2,7 +2,7 @@
 #define STORE_H
 
 class UVSimulator;
-
+#include "loadstore.h"
 
 /**
  * class Store
@@ -11,9 +11,9 @@ class UVSimulator;
  * This class provides the functionality to store a value from the accumulator of the UVSimulator into a specific memory location.
  */
 
-class Store {
+class Store : public LoadStore {
    public:
-    static void execute(UVSimulator& simulator, int operand);
+    void execute(UVSimulator& simulator, int operand) override;
 };
 
 #endif  // STORE_H
