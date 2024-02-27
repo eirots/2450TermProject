@@ -7,6 +7,15 @@ const int MEMORY_SIZE = 100;  // Define the size of the memory array
 
 extern int memory[MEMORY_SIZE];
 
+
+/*
+ * class Write
+ * A class to handle the write operation.
+ *
+ * This class provides the functionality to write the value from the accumulator to a specific memory location 
+   and then print it to the console.
+ */
+
 class Write {
    public:
     void execute(UVSimulator& simulator, int operand);
