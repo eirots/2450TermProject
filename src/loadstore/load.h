@@ -2,7 +2,7 @@
 #define LOAD_H
 
 class UVSimulator;
-
+#include "loadstore.h"
 
 /*
  * class Load
@@ -10,9 +10,9 @@ class UVSimulator;
  *
  * This class provides the functionality to load a value from a specific memory location into the accumulator of the program.
  */
-class Load {
+class Load : public LoadStore {
    public:
-    static void execute(UVSimulator& simulator, int operand);
+    void execute(UVSimulator& simulator, int operand) override;
 };
 
 #endif  // LOAD_H
