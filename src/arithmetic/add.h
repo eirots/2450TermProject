@@ -1,9 +1,9 @@
 class UVSimulator;  // forward declaration to avoid cyclical declarations
 
 #include "../uvsimulator.h"
+#include "arithmetic.h"
 #ifndef ADD_H
 #define ADD_H
-
 
 /*
  * class Add
@@ -12,9 +12,9 @@ class UVSimulator;  // forward declaration to avoid cyclical declarations
  * This class provides the functionality to add a value from a specific memory location to the accumulator of the UVSimulator.
  */
 
-class Add {
+class Add : public Arithmetic {
    public:
     Add();
-    void execute(UVSimulator& simulator, int operand);
+    void execute(UVSimulator& simulator, int operand) override;
 };
 #endif  // ADD_H

@@ -14,7 +14,7 @@ UVSimulator::UVSimulator() : memory(100, 0), accumulator(0), pc(0) {}
 
 /*
  * Loads a program into the memory.
- 
+
  * param: program A vector of integers representing the program to be loaded.
  * pre: The program must be a valid sequence of instructions.
  * post: The program is loaded into the memory.
@@ -27,7 +27,7 @@ void UVSimulator::loadProgram(const vector<int>& program) {
 
 /*
  * Get a value from memory location.
- 
+
  * param: The index of the memory location.
  * pre: The index must be within the bounds of the memory size.
  * post: Returns the value at the specified index in the memory. If the index is out of bounds, returns 0.
@@ -40,7 +40,7 @@ int UVSimulator::getMemory(int index) const {
     }
 }
 
-/* 
+/*
  * Set a value to memory location
 
  * param index The index of the memory location, and the value to be set at the specified memory location.
@@ -73,7 +73,7 @@ int UVSimulator::getAccumulator() const {
     return accumulator;
 }
 
-/* 
+/*
  * Set value to accumulator
 
  * param: value The value to be set in the accumulator.
@@ -95,7 +95,7 @@ void UVSimulator::setPC(int value) {
     pc = value;
 }
 
-/* 
+/*
  * gets value of PC
 
  * pre None.
@@ -107,7 +107,7 @@ int UVSimulator::getPC() {
 
 /*
  * Build a program
- 
+
  * pre: None.
  * post: Returns a vector of integers representing the program built by the user.
  */
@@ -150,7 +150,7 @@ void UVSimulator::printMemory() const {
 
 /*
  * Execute the program
- 
+
  * pre: A program must be loaded into the memory.
  * post: The program is executed and the state of the memory, accumulator, and program counter may be changed.
  */

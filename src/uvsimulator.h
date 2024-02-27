@@ -1,4 +1,5 @@
 // forward declarations to avoid cyclical delcarations
+class Arithmetic;
 class Add;
 class Divide;
 class Multiply;
@@ -9,6 +10,7 @@ class Branch;
 class BranchZero;
 class BranchNeg;
 class Halt;
+
 // end of forward declarations
 #ifndef UVSIMULATOR_H
 #define UVSIMULATOR_H
