@@ -28,7 +28,7 @@
 // ../../io/*.cpp ../../loadstore/*.cpp ../../uvsimulator.cpp  -o ../unit_tests\
 
 
-//  BELOW FUNCTIONALITY WILL BE ADDED NEXT MILESTONE                                               \
+//  BELOW FUNCTIONALITY WILL BE ADDED NEXT MILESTONE                                             \
 //Coverage tested using Gcov Viewer from VS Studio's extension library.                          \
 //                                                                                               \
 //  Steps to test coverage:                                                                      \
@@ -93,6 +93,7 @@ void writeToFile(std::string path, std::string data) {
 
 // START OF ARITHMETIC TESTS
 // Written by Andrew Gallagher and Andrew Storie
+// verifies that adding works
 void testAdd1() {
   Add adder;
   UVSimulator simulator;
@@ -122,6 +123,7 @@ void testAdd2() {
   assert(simulator.getAccumulator() == 5);
   spitline("\tadd2 passed");
 }
+// ensures that base subtraction functionality works correctly
 void testSubtract1() {
   UVSimulator simulator;
   simulator.setAccumulator(10);
@@ -147,6 +149,7 @@ void testSubtract2() {
   assert(simulator.getAccumulator() == 5);
   spitline("\tsubtract2 passed");
 }
+// verifies that base multiplication functionaltiy works correctly
 void testMultiply1() {
   UVSimulator sim;
   Multiply multiplier;
@@ -176,6 +179,7 @@ void testMultiply2() {
 
   spitline("\tmultiply2 passed");
 }
+// ensures functionality of the division operator
 void testDivide() {
   UVSimulator sim;
   Divide div;
@@ -189,6 +193,7 @@ void testDivide() {
   assert(sim.getAccumulator() == 4);
   spitline("\tdivide passed");
 }
+// ensures dividing by zero throws an exception
 void testDivideByZero() {
   UVSimulator sim;
   Divide divider;
@@ -211,6 +216,9 @@ void testDivideByZero() {
 
 // CONTROL TESTS
 // Written by Juan Marin
+
+// ensures base branch functionality branches to the correct location by
+// updating the PC
 void testBranch() {
   UVSimulator simulator;
   int operand = 5;
@@ -221,6 +229,8 @@ void testBranch() {
   assert(simulator.getPC() == operand);
   spitline("\tbranch passed");
 }
+// ensures UVSim branches correctly when branching on a negaive value in
+// accumulator
 void testBranchNeg() {
   UVSimulator simulator;
   int operand = 5;
@@ -232,6 +242,8 @@ void testBranchNeg() {
   assert(simulator.getPC() == operand);
   spitline("\tbranch negative passed");
 }
+// ensures UVSim branches correctly when using branch on zero command and
+// accumulator is zero
 void testBranchZero() {
   UVSimulator simulator;
   int operand = 5;
@@ -243,6 +255,7 @@ void testBranchZero() {
   assert(simulator.getPC() == operand);
   spitline("\tbranch zero passed");
 }
+// ensures halting stops UVSim
 void testHalt() {
   UVSimulator simulator;
   int memSize = 100;
@@ -260,6 +273,7 @@ void testHalt() {
 
 // START OF LOAD/STORE TESTS
 // Written by Ryan Jones
+// ensures loading to a specific location works correctly
 void testLoad1() {
   UVSimulator simulator;
   int operand = 10;
@@ -270,6 +284,8 @@ void testLoad1() {
   assert(simulator.getAccumulator() == simulator.getMemory(operand));
   spitline("\tload 1 passed");
 }
+// ensures loading from a specific location after adding to a different one
+// produces different results
 void testLoad2() {
   UVSimulator sim;
   int operand = 0;
@@ -281,6 +297,7 @@ void testLoad2() {
   assert(sim.getAccumulator() == sim.getMemory(0));
   spitline("\tload 2 passed");
 }
+// ensures storing to a specific place in memory works correctly
 void testStore() {
   UVSimulator simulator;
   int operand = 20;
@@ -376,6 +393,7 @@ void runLoadStore() {
   updateMetric(spit);
   spitline(spit);
 }
+// END OF BATCH RUN TEST FUNCTIONS
 
 int main() {
   spitline("RUNNING UNIT TESTS:");
