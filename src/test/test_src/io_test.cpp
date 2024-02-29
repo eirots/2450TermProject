@@ -6,6 +6,8 @@
 
 extern int memory[];
 
+// Written by Nate Young
+
 void test_READ() {
   UVSimulator simulator; // Create an instance of UVSimulator
 

@@ -34,6 +34,7 @@
 //    2) Run your program or tests.                                                              \
 //    3) Open a source file in vscode and use ctrl+shift+P to run the GcovViewer: Show command.  \
 
+// boilerplate test functionality and writing to files created by Andrew Storie
 
 // common debug macro included below
 #define ASSERT(condition)                                                      \
@@ -83,6 +84,7 @@ void writeToFile(std::string path, std::string data) {
 }
 
 // START OF ARITHMETIC TESTS
+// Written by Andrew Gallagher and Andrew Storie
 void testAdd1() {
   Add adder;
   UVSimulator simulator;
@@ -200,6 +202,7 @@ void testDivideByZero() {
 // END OF ARITHMATIC TESTS
 
 // CONTROL TESTS
+// Written by Juan Marin
 void testBranch() {
   UVSimulator simulator;
   int operand = 5;
@@ -248,6 +251,7 @@ void testHalt() {
 // I/O TESTS ARE IN ANOTHER FILE//
 
 // START OF LOAD/STORE TESTS
+// Written by Ryan Jones
 void testLoad1() {
   UVSimulator simulator;
   int operand = 10;
@@ -285,6 +289,7 @@ void testStore() {
 // END OF LOAD/STORE TESTS
 
 // BATCH RUN TEST FUNCTIONS
+// Written by Andrew Storie
 void runArith() {
   spitline("Arithmetic Tests:");
 
