@@ -2,7 +2,9 @@
 #include <chrono>
 #include <ctime>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <unistd.h>
 
@@ -26,7 +28,7 @@
 // ../../io/*.cpp ../../loadstore/*.cpp ../../uvsimulator.cpp  -o ../unit_tests\
 
 
-//BELOW FUNCTIONALITY WILL BE ADDED NEXT MILESTONE                                               \
+//  BELOW FUNCTIONALITY WILL BE ADDED NEXT MILESTONE                                               \
 //Coverage tested using Gcov Viewer from VS Studio's extension library.                          \
 //                                                                                               \
 //  Steps to test coverage:                                                                      \
@@ -63,21 +65,27 @@ void spitline(std::string lineToPrint) {
 
 void updateMetric(std::string str) { metricsb += str + "\n"; }
 
-std::time_t &getTime() {
-  auto time = std::chrono::system_clock::now();
+std::string getTime() {
+  auto end = std::chrono::system_clock::now();
+  std::time_t returnTime = std::chrono::system_clock::to_time_t(end);
 
-  std::time_t returnTime = std::chrono::system_clock::to_time_t(time);
-  return returnTime;
+  // Convert time_t to std::tm
+  std::tm tmTime = *std::localtime(&returnTime);
+
+  // Create a string stream to format the time
+  std::ostringstream oss;
+  oss << std::put_time(&tmTime, "%Y-%m-%d %H:%M:%S");
+
+  return oss.str();
 }
 // used for writing metric data to files
 void writeToFile(std::string path, std::string data) {
-  char cwd[1024];
-  std::cout << getcwd(cwd, sizeof(cwd)) << std::endl;
+  // char cwd[1024];
+  // std::cout << getcwd(cwd, sizeof(cwd)) << std::endl;
   std::ofstream outputFile(path, std::ios::app); // append mode
   if (outputFile.is_open()) {
     outputFile << data << std::endl;
-    outputFile << "Finished at: " << std::ctime(&getTime()) << std::endl
-               << std::endl;
+    outputFile << "Finished at: " << getTime() << std::endl << std::endl;
   } else {
     std::cerr << "Unable to open file located at: " + path << std::endl;
   }
