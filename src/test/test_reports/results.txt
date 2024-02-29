@@ -8,24 +8,23 @@ Arithmetic Tests:
 	multiply2 passed
 	divide passed
 	dividebyzero passed
-		Time to run arithmetic tests: 106 microseconds
+		Time to run arithmetic tests: 113 microseconds
 Control Tests:
 	branch passed
 	branch negative passed
 	branch zero passed
 	halt passed
-		Time to run control tests: 30 microseconds
+		Time to run control tests: 38 microseconds
 I/O Tests:
-		Time to run IO tests: 25 microseconds
+		Time to run IO tests: 33 microseconds
 Load/Store Tests:
 	load 1 passed
 	load 2 passed
 	store passed
-		Time to run LoadStore tests: 21 microseconds
+		Time to run LoadStore tests: 27 microseconds
 END OF TESTS
 
-Finished at: Sat Apr  9 11:08:00 2163
-
+Finished at: 2024-02-28 20:24:28
 
 RUNNING UNIT TESTS:
 Arithmetic Tests:
@@ -37,22 +36,301 @@ Arithmetic Tests:
 	multiply2 passed
 	divide passed
 	dividebyzero passed
-		Time to run arithmetic tests: 111 microseconds
+		Time to run arithmetic tests: 92 microseconds
 Control Tests:
 	branch passed
 	branch negative passed
 	branch zero passed
 	halt passed
-		Time to run control tests: 30 microseconds
+		Time to run control tests: 26 microseconds
 I/O Tests:
-		Time to run IO tests: 26 microseconds
+		Time to run IO tests: 24 microseconds
 Load/Store Tests:
 	load 1 passed
 	load 2 passed
 	store passed
-		Time to run LoadStore tests: 21 microseconds
+		Time to run LoadStore tests: 18 microseconds
 END OF TESTS
 
-Finished at: Wed Jan 26 00:51:12 2163
+Finished at: 2024-02-28 20:24:30
 
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 91 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 25 microseconds
+I/O Tests:
+		Time to run IO tests: 25 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 18 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:30
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 126 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 39 microseconds
+I/O Tests:
+		Time to run IO tests: 31 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 27 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:31
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 131 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 25 microseconds
+I/O Tests:
+		Time to run IO tests: 355 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 19 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:31
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 137 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 39 microseconds
+I/O Tests:
+		Time to run IO tests: 32 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 27 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:31
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 94 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 24 microseconds
+I/O Tests:
+		Time to run IO tests: 21 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 18 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:32
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 97 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 25 microseconds
+I/O Tests:
+		Time to run IO tests: 23 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 18 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:32
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 368 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 25 microseconds
+I/O Tests:
+		Time to run IO tests: 24 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 18 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:33
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 114 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 38 microseconds
+I/O Tests:
+		Time to run IO tests: 32 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 27 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:33
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 407 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 24 microseconds
+I/O Tests:
+		Time to run IO tests: 23 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 18 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:33
+
+RUNNING UNIT TESTS:
+Arithmetic Tests:
+	add1 passed
+	add2 passed
+	subtract1 passed
+	subtract2 passed
+	multiply1 passed
+	multiply2 passed
+	divide passed
+	dividebyzero passed
+		Time to run arithmetic tests: 135 microseconds
+Control Tests:
+	branch passed
+	branch negative passed
+	branch zero passed
+	halt passed
+		Time to run control tests: 40 microseconds
+I/O Tests:
+		Time to run IO tests: 32 microseconds
+Load/Store Tests:
+	load 1 passed
+	load 2 passed
+	store passed
+		Time to run LoadStore tests: 27 microseconds
+END OF TESTS
+
+Finished at: 2024-02-28 20:24:34
 
