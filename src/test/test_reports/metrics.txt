@@ -1,0 +1,16 @@
+		Time to run arithmetic tests: 106 microseconds
+		Time to run control tests: 30 microseconds
+		Time to run IO tests: 25 microseconds
+		Time to run LoadStore tests: 21 microseconds
+
+Finished at: Sat Apr  9 11:08:00 2163
+
+
+		Time to run arithmetic tests: 111 microseconds
+		Time to run control tests: 30 microseconds
+		Time to run IO tests: 26 microseconds
+		Time to run LoadStore tests: 21 microseconds
+
+Finished at: Wed Jan 26 00:51:12 2163
+
+
