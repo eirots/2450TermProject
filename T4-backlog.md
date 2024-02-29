@@ -7,8 +7,10 @@
 | 2/14/24 | 4-5 unit tests for each member |  |
 | 2/14/24 | User manual w/ instructions to run program |   |
 | 2/16/24 | Create Wire Frame |   |
+| 2/16/24 | Create product justification | 2/27/24 |
 | 2/16/24 | Clean up Github board | Ongoing |
 | 2/16/24 | Mock up GUI |   |
+| 2/16/24 | Update ReadMe | 2/26/24 |
 | 2/18/24 | SRS draft from each team member | 2/21/24 |
 | 2/22/24 | Compile SRS docs and edit for 2nd draft | 2/27/24 |
 | 2/22/24 | Add library.doc |   |
