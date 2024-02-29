@@ -1,4 +1,6 @@
 #include <cassert>
+#include <chrono>
+#include <fstream>
 #include <iostream>
 #include <string>
 
@@ -18,10 +20,11 @@
 #include "io_test.cpp"
 
 // COMPILE COMMAND FOR THIS FILE:
-// g++ -std=c++11 testsuite.cpp ../../control/*.cpp ../../arithmetic/*.cpp
+// g++ -std=c++20 testsuite.cpp ../../control/*.cpp ../../arithmetic/*.cpp
 // ../../io/*.cpp ../../loadstore/*.cpp ../../uvsimulator.cpp  -o ../unit_tests\
 
 
+//BELOW FUNCTIONALITY WILL BE ADDED NEXT MILESTONE                                               \
 //Coverage tested using Gcov Viewer from VS Studio's extension library.                          \
 //                                                                                               \
 //  Steps to test coverage:                                                                      \
@@ -39,12 +42,33 @@
     }                                                                          \
   }
 
-static std::string METRIC_FILE_LOC = "../test_reports/metrics.txt";
-static std::string TEST_RESULT_LOC = "../test_reports/results.txt";
+// global variable declaration for use later
+static std::string METRIC_FILE =
+    "../test_reports/metrics.txt"; // constant for metric file location
+static std::string TEST_RESULT =
+    "../test_reports/results.txt"; // constant for results file location
 
-// used for knowing if a test passed
+// setting up strings for concationation to file
+std::string metricsb = "";
+std::string outputsb = "";
+
+// small function to print out without using a namespace
 void spitline(std::string lineToPrint) {
   std::cout << lineToPrint << std::endl;
+  outputsb += lineToPrint + "\n";
+}
+
+void updateMetric(std::string str) { metricsb += str + "\n"; }
+
+// used for writing metric data to files
+void writeToFile(std::string path, std::string data) {
+  std::ofstream outputFile(path, std::ios::app); // append mode
+  if (outputFile.is_open()) {
+    outputFile << data << std::endl;
+    outputFile.close();
+  } else {
+    std::cerr << "Unable to open file located at: " + path << std::endl;
+  }
 }
 
 // START OF ARITHMETIC TESTS
@@ -62,10 +86,7 @@ void testAdd1() {
   assert(simulator.getAccumulator() == 15);
   spitline("\tadd1 passed");
 }
-
-/*
-Verifies that adding works at specific locations.
-*/
+// verifies that adding works at a specific location
 void testAdd2() {
   Add adder;
   UVSimulator simulator;
@@ -80,7 +101,6 @@ void testAdd2() {
   assert(simulator.getAccumulator() == 5);
   spitline("\tadd2 passed");
 }
-
 void testSubtract1() {
   UVSimulator simulator;
   simulator.setAccumulator(10);
@@ -93,7 +113,6 @@ void testSubtract1() {
   assert(simulator.getAccumulator() == 5);
   spitline("\tsubtract1 passed");
 }
-
 // verifies that subtracting works at an exact location
 void testSubtract2() {
   UVSimulator simulator;
@@ -107,7 +126,6 @@ void testSubtract2() {
   assert(simulator.getAccumulator() == 5);
   spitline("\tsubtract2 passed");
 }
-
 void testMultiply1() {
   UVSimulator sim;
   Multiply multiplier;
@@ -122,7 +140,6 @@ void testMultiply1() {
 
   spitline("\tmultiply1 passed");
 }
-
 // verifies that multiplication works at an exact location
 void testMultiply2() {
   UVSimulator sim;
@@ -172,7 +189,6 @@ void testDivideByZero() {
 // END OF ARITHMATIC TESTS
 
 // CONTROL TESTS
-
 void testBranch() {
   UVSimulator simulator;
   int operand = 5;
@@ -221,7 +237,6 @@ void testHalt() {
 // I/O TESTS ARE IN ANOTHER FILE//
 
 // START OF LOAD/STORE TESTS
-//  Define a test function for Load
 void testLoad1() {
   UVSimulator simulator;
   int operand = 10;
@@ -243,8 +258,6 @@ void testLoad2() {
   assert(sim.getAccumulator() == sim.getMemory(0));
   spitline("\tload 2 passed");
 }
-
-// Define a test function for Store
 void testStore() {
   UVSimulator simulator;
   int operand = 20;
@@ -260,8 +273,11 @@ void testStore() {
 }
 // END OF LOAD/STORE TESTS
 
-int main() {
+// BATCH RUN TEST FUNCTIONS
+void runArith() {
   spitline("Arithmetic Tests:");
+
+  auto start = std::chrono::high_resolution_clock::now();
   testAdd1();
   testAdd2();
   testSubtract1();
@@ -271,20 +287,82 @@ int main() {
   testDivide();
   testDivideByZero();
 
+  auto stop = std::chrono::high_resolution_clock::now();
+  auto duration = duration_cast<std::chrono::microseconds>(stop - start);
+
+  std::string spit =
+      "\t\tTime to run arithmetic tests: " + std::to_string(duration.count()) +
+      " microseconds";
+
+  updateMetric(spit);
+  spitline(spit);
+}
+void runControl() {
+
   spitline("Control Tests:");
+
+  auto start = std::chrono::high_resolution_clock::now();
   testBranch();
   testBranchNeg();
   testBranchZero();
   testHalt();
+  auto stop = std::chrono::high_resolution_clock::now();
+  auto duration = duration_cast<std::chrono::microseconds>(stop - start);
 
+  std::string spit =
+      "\t\tTime to run control tests: " + std::to_string(duration.count()) +
+      " microseconds";
+
+  updateMetric(spit);
+  spitline(spit);
+}
+void runIO() {
   spitline("I/O Tests:");
+
+  auto start = std::chrono::high_resolution_clock::now();
+
   test_READ();
   test_WRITE();
 
+  auto stop = std::chrono::high_resolution_clock::now();
+  auto duration = duration_cast<std::chrono::microseconds>(stop - start);
+
+  std::string spit =
+      "\t\tTime to run IO tests: " + std::to_string(duration.count()) +
+      " microseconds";
+
+  updateMetric(spit);
+  spitline(spit);
+}
+void runLoadStore() {
   spitline("Load/Store Tests:");
+
+  auto start = std::chrono::high_resolution_clock::now();
   testLoad1();
   testLoad2();
   testStore();
 
+  auto stop = std::chrono::high_resolution_clock::now();
+  auto duration = duration_cast<std::chrono::microseconds>(stop - start);
+
+  std::string spit =
+      "\t\tTime to run LoadStore tests: " + std::to_string(duration.count()) +
+      " microseconds";
+
+  updateMetric(spit);
+  spitline(spit);
+}
+
+int main() {
+  spitline("RUNNING UNIT TESTS:");
+
+  runArith();
+  runControl();
+  runIO();
+  runLoadStore();
+
   spitline("END OF TESTS");
+
+  writeToFile(METRIC_FILE, metricsb);
+  writeToFile(TEST_RESULT, outputsb);
 }
