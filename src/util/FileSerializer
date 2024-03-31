@@ -1,0 +1,40 @@
+#ifndef FILE_SERIALIZER_H
+#define FILE_SERIALIZER_H
+
+#include <fstream>
+#include <iostream>
+#include <stdexcept>
+
+using std::ofstream;
+using std::string;
+
+template <typename T> class FileSerializer {
+public:
+  // saves an object to a bin file
+  static bool save(const T &object, const string &filePath) {
+    std::ofstream outFile(filePath, std::ios::binary);
+
+    if (!outFile.is_open()) {
+      std::cerr << "Failed to open file for writing: " << filePath << std::endl;
+      return false;
+    }
+    outFile.write(reinterpret_cast<const char *>(&object), sizeof(T));
+    outFile.close();
+    return true;
+  }
+
+  // loads an object from a bin file
+  static T load(const string &filePath) {
+    T object;
+    std::ifstream inFile(filePath, std::ios::binary);
+    if (!inFile.is_open()) {
+      std::cerr << "failed to open file for reading: " << filePath << std::endl;
+      throw std::runtime_error("failed to open file for reading");
+    }
+
+    inFile.read(reinterpret_cast<char *>(&object), sizeof(T));
+    inFile.close();
+    return object;
+  }
+};
+#endif // FILESERIALIZER_H
