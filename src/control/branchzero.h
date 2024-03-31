@@ -1,7 +1,7 @@
 #ifndef branchzero_h
 #define branchzero_h
 
-#include "../uvsimulator.h"
+#include "..\uvsimulator.h"
 #include "control.h"
 
 class UVSimulator;  // forward declaration to avoid cyclical declarations

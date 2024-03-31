@@ -1,0 +1,20 @@
+﻿  add.cpp
+  divide.cpp
+  multiply.cpp
+C:\Projects\CS2450\2450TermProject-main\src\arithmetic\divide.cpp(21,9): warning C4101: 'result': unreferenced local variable
+  subtract.cpp
+  branch.cpp
+  branchneg.cpp
+  branchzero.cpp
+  halt.cpp
+  read.cpp
+  write.cpp
+  load.cpp
+  store.cpp
+  uvsimulator.cpp
+C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp(67,51): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  MyForm.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  add.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  UVSIM.vcxproj -> C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\x64\Debug\UVSIM.exe

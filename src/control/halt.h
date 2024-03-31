@@ -1,6 +1,6 @@
 #ifndef halt_h
 #define halt_h
-#include "../uvsimulator.h"
+#include "..\uvsimulator.h"
 
 class UVSimulator;  // forward declaration to avoid cyclical declarations
 

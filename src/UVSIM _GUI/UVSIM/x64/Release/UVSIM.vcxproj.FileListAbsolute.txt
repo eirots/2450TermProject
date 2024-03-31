@@ -1,0 +1,3 @@
+C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Release\UVSIM.vcxproj.AssemblyReference.cache
+C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Release\UVSIM.MyForm.resources
+C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Release\UVSIM.vcxproj.GenerateResource.cache

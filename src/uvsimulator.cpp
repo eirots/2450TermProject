@@ -150,10 +150,9 @@ void UVSimulator::printMemory() const {
  * post: The program is executed and the state of the memory, accumulator, and
  program counter may be changed.
  */
-void UVSimulator::executeProgram() {
-  while (true) {
-    int instruction =
-        memory[pc]; // Reads instruction from memory (starts at 00)
+void UVSimulator::executeProgram(int command) {
+    pc++;
+    int instruction = command; // Reads instruction from memory (starts at 00)
     int opcode = instruction / 100;  // Instruction to take place (i.e., "ADD")
     int operand = instruction % 100; // Memory location for that instruction
 
@@ -217,14 +216,8 @@ void UVSimulator::executeProgram() {
     {
       Halt halt;
       halt.execute(*this);
-    }
-      return;
+    } return;
     default:
-      cout << "Opcode: " << opcode
-           << " is invalid and was not included in the program." << endl;
-      return;
+      break;
     }
-
-    ++pc; // Move to the next instruction
-  }
 }

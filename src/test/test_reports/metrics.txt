@@ -82,3 +82,31 @@ Finished at: 2024-02-28 20:24:33
 
 Finished at: 2024-02-28 20:24:34
 
+		Time to run arithmetic tests: 634 microseconds
+		Time to run control tests: 264 microseconds
+		Time to run IO tests: 950 microseconds
+		Time to run LoadStore tests: 191 microseconds
+
+Finished at: 2024-02-28 20:49:04
+
+		Time to run arithmetic tests: 616 microseconds
+		Time to run control tests: 297 microseconds
+		Time to run IO tests: 445 microseconds
+		Time to run LoadStore tests: 175 microseconds
+
+Finished at: 2024-02-28 20:49:07
+
+		Time to run arithmetic tests: 680 microseconds
+		Time to run control tests: 313 microseconds
+		Time to run IO tests: 522 microseconds
+		Time to run LoadStore tests: 209 microseconds
+
+Finished at: 2024-02-28 20:49:14
+
+		Time to run arithmetic tests: 867 microseconds
+		Time to run control tests: 368 microseconds
+		Time to run IO tests: 660 microseconds
+		Time to run LoadStore tests: 307 microseconds
+
+Finished at: 2024-02-28 20:50:29
+
