@@ -10,12 +10,12 @@ class Subtract;
 // io classes
 class IO;
 class Read;
-class Write;
 
 // control classes
 class Control;
 class Branch;
-class BranchZero;
+class BranchZero;class Write;
+
 class BranchNeg;
 class Halt;
 
