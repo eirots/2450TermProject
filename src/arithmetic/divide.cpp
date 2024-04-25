@@ -19,10 +19,11 @@ Divide::Divide() {}
  */
 void Divide::execute(UVSimulator& sim, int operand) {
     int result;
-    int divisor = sim.getMemory(operand);
+    std::string memVal = sim.getMemory(operand);
+    int divisor = std::stoi(memVal);
     if (divisor != 0) {
         int holder = sim.getAccumulator();
-        holder /= sim.getMemory(operand);
+        holder /= divisor;
         sim.setAccumulator(holder);
         // return result;
     } else {

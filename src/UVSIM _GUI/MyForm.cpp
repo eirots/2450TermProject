@@ -1,4 +1,4 @@
-#include "MyForm.h"
+#include "UVSim.h"
 #include "uvsimulator.h" // Include the header file for UVSimulator
 
 using namespace System;

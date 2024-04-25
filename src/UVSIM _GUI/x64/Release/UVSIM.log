@@ -12,9 +12,17 @@ C:\Projects\CS2450\2450TermProject-main\src\arithmetic\divide.cpp(21,9): warning
   load.cpp
   store.cpp
   uvsimulator.cpp
-C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp(67,51): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp(70,51): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   MyForm.cpp
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\UVSim.h(691,4): warning C4102: 'std': unreferenced label
+  (compiling source file 'MyForm.cpp')
+  
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\UVSim.h(712,3): warning C4102: 'std': unreferenced label
+  (compiling source file 'MyForm.cpp')
+  
   .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
   Generating Code...
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\UVSim.h(718,1): warning C4700: uninitialized local variable 'filePath' used
+C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp(174,1): warning C4715: 'UVSimulator::loadFile': not all control paths return a value
   add.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  UVSIM.vcxproj -> C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\x64\Release\UVSIM.exe
+  UVSIM.vcxproj -> C:\Source\.vs\2450TermProject\UVSIM\x64\Release\UVSIM.exe

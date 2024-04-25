@@ -110,6 +110,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>NotSet</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -121,19 +122,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\arithmetic\add.cpp" />
-    <ClCompile Include="..\..\arithmetic\divide.cpp" />
-    <ClCompile Include="..\..\arithmetic\multiply.cpp" />
-    <ClCompile Include="..\..\arithmetic\subtract.cpp" />
-    <ClCompile Include="..\..\control\branch.cpp" />
-    <ClCompile Include="..\..\control\branchneg.cpp" />
-    <ClCompile Include="..\..\control\branchzero.cpp" />
-    <ClCompile Include="..\..\control\halt.cpp" />
-    <ClCompile Include="..\..\io\read.cpp" />
-    <ClCompile Include="..\..\io\write.cpp" />
-    <ClCompile Include="..\..\loadstore\load.cpp" />
-    <ClCompile Include="..\..\loadstore\store.cpp" />
-    <ClCompile Include="..\..\uvsimulator.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\add.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\divide.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\multiply.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\subtract.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\branch.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\branchneg.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\branchzero.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\halt.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\io\read.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\io\write.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\loadstore\load.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\loadstore\store.cpp" />
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -155,13 +156,13 @@
     <ClInclude Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\loadstore\store.h" />
     <ClInclude Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\uvsimulator.h" />
     <ClInclude Include="file_serializer.h" />
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="UVSim.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
+    <EmbeddedResource Include="UVSim.resx">
+      <DependentUpon>UVSim.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

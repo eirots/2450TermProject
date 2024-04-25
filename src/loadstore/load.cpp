@@ -11,5 +11,5 @@
  * post: The accumulator of the program is set to the value at the specified memory location.
  */
 void Load::execute(UVSimulator& simulator, int operand) {
-    simulator.setAccumulator(simulator.getMemory(operand));
+    simulator.setAccumulator(std::stoi(simulator.getMemory(operand)));
 }

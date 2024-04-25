@@ -15,6 +15,7 @@ Add::Add() {}
  */
 void Add::execute(UVSimulator& simulator, int operand) {
     int holder = simulator.getAccumulator();
-    holder += simulator.getMemory(operand);
+    std::string memVal = simulator.getMemory(operand);
+    holder += std::stoi(memVal);
     simulator.setAccumulator(holder);
 }

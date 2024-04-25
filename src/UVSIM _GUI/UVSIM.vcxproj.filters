@@ -18,48 +18,48 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\arithmetic\add.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\arithmetic\divide.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\add.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\arithmetic\multiply.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\divide.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\arithmetic\subtract.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\multiply.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\control\branch.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\subtract.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\control\branchneg.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\branch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\control\branchzero.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\branchneg.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\control\halt.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\branchzero.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\io\read.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\control\halt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\io\write.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\io\read.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\loadstore\load.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\io\write.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\loadstore\store.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\loadstore\load.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\uvsimulator.cpp">
+    <ClCompile Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\loadstore\store.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="UVSim.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\..\Projects\CS2450\2450TermProject-main\src\arithmetic\add.h">

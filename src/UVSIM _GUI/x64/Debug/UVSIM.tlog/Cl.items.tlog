@@ -1,15 +1,15 @@
-C:\Projects\CS2450\2450TermProject-main\src\arithmetic\add.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\add.obj
-C:\Projects\CS2450\2450TermProject-main\src\arithmetic\divide.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\divide.obj
-C:\Projects\CS2450\2450TermProject-main\src\arithmetic\multiply.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\multiply.obj
-C:\Projects\CS2450\2450TermProject-main\src\arithmetic\subtract.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\subtract.obj
-C:\Projects\CS2450\2450TermProject-main\src\control\branch.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\branch.obj
-C:\Projects\CS2450\2450TermProject-main\src\control\branchneg.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\branchneg.obj
-C:\Projects\CS2450\2450TermProject-main\src\control\branchzero.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\branchzero.obj
-C:\Projects\CS2450\2450TermProject-main\src\control\halt.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\halt.obj
-C:\Projects\CS2450\2450TermProject-main\src\io\read.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\read.obj
-C:\Projects\CS2450\2450TermProject-main\src\io\write.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\write.obj
-C:\Projects\CS2450\2450TermProject-main\src\loadstore\load.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\load.obj
-C:\Projects\CS2450\2450TermProject-main\src\loadstore\store.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\store.obj
-C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\uvsimulator.obj
-C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\MyForm.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\MyForm.obj
-C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cpp;C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\UVSIM\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.obj
+C:\Projects\CS2450\2450TermProject-main\src\arithmetic\add.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\add.obj
+C:\Projects\CS2450\2450TermProject-main\src\arithmetic\divide.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\divide.obj
+C:\Projects\CS2450\2450TermProject-main\src\arithmetic\multiply.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\multiply.obj
+C:\Projects\CS2450\2450TermProject-main\src\arithmetic\subtract.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\subtract.obj
+C:\Projects\CS2450\2450TermProject-main\src\control\branch.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\branch.obj
+C:\Projects\CS2450\2450TermProject-main\src\control\branchneg.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\branchneg.obj
+C:\Projects\CS2450\2450TermProject-main\src\control\branchzero.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\branchzero.obj
+C:\Projects\CS2450\2450TermProject-main\src\control\halt.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\halt.obj
+C:\Projects\CS2450\2450TermProject-main\src\io\read.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\read.obj
+C:\Projects\CS2450\2450TermProject-main\src\io\write.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\write.obj
+C:\Projects\CS2450\2450TermProject-main\src\loadstore\load.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\load.obj
+C:\Projects\CS2450\2450TermProject-main\src\loadstore\store.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\store.obj
+C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\uvsimulator.obj
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\MyForm.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\MyForm.obj
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cpp;C:\Source\.vs\2450TermProject\UVSIM\UVSIM\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.obj

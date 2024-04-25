@@ -15,6 +15,7 @@ Multiply::Multiply() {}
 
 void Multiply::execute(UVSimulator& sim, int operand) {
     int product = sim.getAccumulator();
-    product *= sim.getMemory(operand);
+    std::string memVal = sim.getMemory(operand);
+    product *= std::stoi(memVal);
     sim.setAccumulator(product);
 }

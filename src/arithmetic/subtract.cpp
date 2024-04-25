@@ -16,6 +16,7 @@ Subtract::Subtract() {}
  */
 void Subtract::execute(UVSimulator &simulator, int operand) {
     int accum = simulator.getAccumulator();
-    int result = accum - simulator.getMemory(operand);  // Grab accumulator value
-    simulator.setAccumulator(result);                   // Set accumulator to a value - value in memory
+    std::string memVal = simulator.getMemory(operand);
+    int result = accum - std::stoi(memVal);  // Grab accumulator value
+    simulator.setAccumulator(result);        // Set accumulator to a value - value in memory
 }

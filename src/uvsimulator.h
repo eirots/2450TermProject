@@ -14,8 +14,8 @@ class Read;
 // control classes
 class Control;
 class Branch;
-class BranchZero;class Write;
-
+class BranchZero;
+class Write;
 class BranchNeg;
 class Halt;
 
@@ -24,6 +24,7 @@ class Halt;
 #define UVSIMULATOR_H
 
 #include <vector>
+#include <string> // Added to use std::string
 
 #include "arithmetic/add.h"
 #include "arithmetic/divide.h"
@@ -39,22 +40,24 @@ class Halt;
 #include "loadstore/store.h"
 
 class UVSimulator {
-   private:
-    std::vector<int> memory;
+private:
+    std::vector<std::string> memory;
     int accumulator;
     int pc;
 
-   public:
+public:
     UVSimulator();
-    void loadProgram(const std::vector<int> &program);
+    void loadProgram(const std::vector<std::string>& program); // Changed parameter type
     void executeProgram(int command);
-    std::vector<int> buildProgram();
-    int getMemory(int index) const;
-    void setMemory(int index, int value);
+    std::vector<std::string> buildProgram(); // Changed return type
+    std::string getMemory(int index) const; // Changed return type
+    void setMemory(int index, const std::string& value); // Changed parameter type
     int getMemSize();
     int getAccumulator() const;
     void setAccumulator(int value);
     void printMemory() const;
+    int loadFile(std::string filename);
+    int saveFile(std::string filename);
     void setPC(int value);
     int getPC();
 };

@@ -16,7 +16,7 @@
  */
 void Read::execute(UVSimulator& simulator, int operand) {
     if (operand >= 0 && operand < simulator.getMemSize()) {
-        int input;
+        std::string input;
         std::cout << "Enter input value: ";
         std::cin >> input;
         simulator.setMemory(operand, input);
