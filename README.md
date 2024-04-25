@@ -5,7 +5,7 @@ __UVSim is made from compiled C++; only the executable file is required to run t
 ---
 
 ### **Windows Users** 
-1. **Locate the path of the folder:** Find the executable named "UVSIM_GUI" inside the source folder. Double-click to open the application. 
+1. **Locate the path of the folder:** Find the executable named "UVSIM" inside the source folder. Double-click to open the application. 
 
 
 ### **Unix Users** 
