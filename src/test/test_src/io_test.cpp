@@ -20,7 +20,7 @@ void test_READ() {
   std::cout << "Testing READ function:" << std::endl;
 
   // Execute the program
-  simulator.executeProgram();
+  simulator.loadProgram(program);
 
   // Verify if the memory location has been updated correctly
   if (simulator.getMemory(0) != 10) {
