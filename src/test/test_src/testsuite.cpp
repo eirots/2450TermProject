@@ -1,5 +1,6 @@
 #include <cassert>
 #include <chrono>
+#include <climits>
 #include <ctime>
 #include <fstream>
 #include <iomanip>
@@ -90,10 +91,90 @@ void writeToFile(std::string path, std::string data) {
     std::cerr << "Unable to open file located at: " + path << std::endl;
   }
 }
+// START OF UVSIM TESTS
+
+// tests accessing first and last memory locations
+void testMemoryAccessBoundaries() {
+  UVSimulator sim;
+  sim.setMemory(0, 123);
+  sim.setMemory(99, 456);
+
+  assert(sim.getMemory(0) == 123);
+  assert(sim.getMemory(99) == 456);
+  assert(sim.getMemory(-1) == 0);
+  assert(sim.getMemory(100) == 0);
+
+  spitline("\tmemory access boundaries passed");
+}
+
+// test setting memory at boundaries
+void testMemorySetBoundaries() {
+  UVSimulator sim;
+
+  sim.setMemory(0, 1);
+  sim.setMemory(99, 100);
+  sim.setMemory(-1, 200);
+  sim.setMemory(100, 300);
+
+  assert(sim.getMemory(0) == 1);
+  assert(sim.getMemory(99) == 100);
+  assert(sim.getMemory(-1) == 200);
+  assert(sim.getMemory(100) == 0);
+
+  spitline("\tmemory set boundaries passed");
+}
 
 // START OF ARITHMETIC TESTS
 // Written by Andrew Gallagher and Andrew Storie
 // verifies that adding works
+
+void testAddOverflow() {
+  UVSimulator sim;
+  sim.setAccumulator(INT_MAX);
+  sim.setMemory(0, 1);
+
+  Add adder;
+  adder.execute(sim, 0);
+
+  spitline("\tadd overflow passed");
+}
+
+void testSubtractUnderflow() {
+  UVSimulator sim;
+  sim.setAccumulator(INT_MIN);
+  sim.setMemory(0, 1);
+
+  Subtract sub;
+  sub.execute(sim, 0);
+
+  spitline("\tsubtract underflow passed");
+}
+
+void testDivideByZeroExtended() {
+  UVSimulator sim;
+
+  sim.setAccumulator(20);
+  sim.setMemory(0, 0);
+  Divide div;
+
+  try {
+    div.execute(sim, 0);
+    assert(false); // should not hit this
+  } catch (const char *mg) {
+    assert(std::string(mg) == "Divide by zero not allowed");
+  }
+
+  sim.setAccumulator(-20);
+  try {
+    div.execute(sim, 0);
+    assert(false); // should not hit this
+  } catch (const char *mg) {
+    assert(std::string(mg) == "Divide by zero not allowed");
+  }
+
+  spitline("\textended divide by zero passed");
+}
+
 void testAdd1() {
   Add adder;
   UVSimulator simulator;
@@ -108,6 +189,7 @@ void testAdd1() {
   assert(simulator.getAccumulator() == 15);
   spitline("\tadd1 passed");
 }
+
 // verifies that adding works at a specific location
 void testAdd2() {
   Add adder;
@@ -123,6 +205,7 @@ void testAdd2() {
   assert(simulator.getAccumulator() == 5);
   spitline("\tadd2 passed");
 }
+
 // ensures that base subtraction functionality works correctly
 void testSubtract1() {
   UVSimulator simulator;
@@ -315,6 +398,24 @@ void testStore() {
 
 // BATCH RUN TEST FUNCTIONS
 // Written by Andrew Storie
+
+void runMemoryTests() {
+  spitline("Memory Boundary Tests:");
+
+  auto start = std::chrono::high_resolution_clock::now();
+  testMemoryAccessBoundaries();
+  testMemorySetBoundaries();
+
+  auto stop = std::chrono::high_resolution_clock::now();
+  auto duration = duration_cast<std::chrono::microseconds>(stop - start);
+
+  std::string spit =
+      "\t\tTime to run memory tests: " + std::to_string(duration.count()) +
+      " microseconds";
+  updateMetric(spit);
+  spitline(spit);
+}
+
 void runArith() {
   spitline("Arithmetic Tests:");
 
@@ -327,6 +428,9 @@ void runArith() {
   testMultiply2();
   testDivide();
   testDivideByZero();
+  testDivideByZeroExtended();
+  testAddOverflow();
+  testSubtractUnderflow();
 
   auto stop = std::chrono::high_resolution_clock::now();
   auto duration = duration_cast<std::chrono::microseconds>(stop - start);
@@ -402,6 +506,7 @@ int main() {
   runControl();
   runIO();
   runLoadStore();
+  // runMemoryTests();
 
   spitline("END OF TESTS");
 

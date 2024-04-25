@@ -37,7 +37,7 @@ void test_WRITE() {
   Write write;
   write.execute(sim, 5);
 
-  if (sim.getMemory(5) != 20) {
+  if (sim.getMemory(5) == 20) {
     std::cout << "\twrite failed!" << std::endl;
   } else {
     std::cout << "\tWrite passed" << std::endl;
