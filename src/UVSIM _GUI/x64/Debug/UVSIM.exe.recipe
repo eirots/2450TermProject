@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\x64\Debug\UVSIM.exe</FullPath>
+      <FullPath>C:\Source\.vs\2450TermProject\UVSIM\x64\Debug\UVSIM.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

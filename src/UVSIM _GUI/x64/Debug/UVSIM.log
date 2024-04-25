@@ -1,20 +1,14 @@
-﻿  add.cpp
-  divide.cpp
-  multiply.cpp
-C:\Projects\CS2450\2450TermProject-main\src\arithmetic\divide.cpp(21,9): warning C4101: 'result': unreferenced local variable
-  subtract.cpp
-  branch.cpp
-  branchneg.cpp
-  branchzero.cpp
-  halt.cpp
-  read.cpp
-  write.cpp
-  load.cpp
-  store.cpp
-  uvsimulator.cpp
-C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp(67,51): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+﻿  uvsimulator.cpp
+C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp(70,51): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   MyForm.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\UVSim.h(691,4): warning C4102: 'std': unreferenced label
+  (compiling source file 'MyForm.cpp')
+  
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\UVSim.h(712,3): warning C4102: 'std': unreferenced label
+  (compiling source file 'MyForm.cpp')
+  
   Generating Code...
+C:\Source\.vs\2450TermProject\UVSIM\UVSIM\UVSim.h(718,1): warning C4700: uninitialized local variable 'filePath' used
+C:\Projects\CS2450\2450TermProject-main\src\uvsimulator.cpp(168,1): warning C4715: 'UVSimulator::loadFile': not all control paths return a value
   add.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  UVSIM.vcxproj -> C:\Projects\CS2450\2450TermProject-main\src\UVSIM _GUI\x64\Debug\UVSIM.exe
+  UVSIM.vcxproj -> C:\Source\.vs\2450TermProject\UVSIM\x64\Debug\UVSIM.exe

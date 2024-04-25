@@ -11,5 +11,13 @@
  * post: The value in the accumulator of the UVSimulator is stored at the specified memory location.
  */
 void Store::execute(UVSimulator& simulator, int operand) {
-    simulator.setMemory(operand, simulator.getAccumulator()); // param1 = location, param2 value
+    int holder = simulator.getAccumulator();
+    std::string val;
+    if (holder >= 0) {
+        val = "+" + std::to_string(holder); //Add "+" if value is positive
+    }
+    else {
+        val = std::to_string(holder);   //If value is negative, to_string will keep "-"
+    }
+    simulator.setMemory(operand, val); // param1 = location, param2 value
 }

@@ -20,7 +20,7 @@ int memory[MEMORY_SIZE];  // Define the memory array
  */
 void Write::execute(UVSimulator& simulator, int operand) {
     if (operand >= 0 && operand < MEMORY_SIZE) {
-        int value = simulator.getMemory(operand);
+        std::string value = simulator.getMemory(operand);
         std::cout << "Value " << value << " written at location " << operand << std::endl;
     } else {
         throw std::out_of_range("Memory location out of range");
